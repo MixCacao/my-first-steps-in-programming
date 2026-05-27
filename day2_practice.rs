@@ -1,12 +1,17 @@
 fn main() {
-    let player_name = "Player 1";
-    let mut player_health = 100; 
-    
-    println!("Welcome, {}!", player_name);
-    println!("Your current health is: {}", player_health);
-    
-    // O jogador tomou um ataque! Vamos mudar o valor da vida:
-    player_health = 75;
-    
-    println!("Oh no! You got hit! New health: {}", player_health);
+    let enemy_name = "Goblin";
+    let mut enemy_health = 50;
+    let sword_damage = 15;
+
+    println!("A wild {} appears with {} HP!", enemy_name, enemy_health);
+
+    // First attack
+    println!("You slash the {} with your sword for {} damage!", enemy_name, sword_damage);
+    enemy_health = enemy_health - sword_damage;
+    println!("{} health is now: {}", enemy_name, enemy_health);
+
+    // Second attack
+    println!("You hit the {} again for {} damage!", enemy_name, sword_damage);
+    enemy_health = enemy_health - sword_damage;
+    println!("{} health is now: {}", enemy_name, enemy_health);
 }
